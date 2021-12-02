@@ -1,0 +1,104 @@
+body{
+    background-color: #333;
+}
+.box{
+    color:rgb(25,188,139);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* border: 1px solid whitesmoke; */
+    box-shadow: 0px 25px 50px rgb(0,0,0,0.5);
+    transform: translate(-50%,-50%);
+    font-size: 50px;
+    padding: 16px 30px;
+    overflow: hidden;
+    transition: 1s;
+}
+.box::before{
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 50%;
+    background-color: rgb(25,188,139,0.05);
+}
+
+.box span:nth-child(1){
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    height: 2px;
+    background: linear-gradient(to right,#ece4e400,#e8f1ef71,#037055);
+    animation: anim1 2s linear infinite;
+    animation-delay: 1;
+}
+@keyframes anim1 {
+    0%{
+       transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+.box span:nth-child(2){
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    bottom: 0px;
+    height: 2px;
+    background: linear-gradient(to right,#037055,#e8f1ef71,#ece4e400);
+    animation: anim2 2s linear infinite;
+    animation-delay: 1;
+}
+@keyframes anim2 {
+    0%{
+       transform: translatex(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+.box span:nth-child(3){
+    position: absolute;
+    width: 2px;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    background: linear-gradient(to right,#ece4e400,#e8f1ef71,#037055);  
+    animation: anim3 2s linear infinite; 
+}
+ @keyframes anim3 {
+    0%{
+       transform: translatey(100%);
+    }
+    100%{
+        transform: translatey(-100%);
+    }
+}
+.box span:nth-child(4){
+    position: absolute;
+    width: 2px;
+    right: 0px;
+    bottom: 0px;
+    height: 100%;
+    background: linear-gradient(to right,#ece4e400,#e8f1ef71,#037055);
+    animation: anim5 2s linear infinite;
+}
+ @keyframes anim5 {
+    0%{
+       transform: translatey(-100%);
+    }
+    100%{
+        transform: translatey(100%);
+    } 
+} 
+.box:hover{
+    background-color: rgba(25, 188, 139, 0.767);
+    color: #333;
+    box-shadow: 0 25px 50px rgba(16, 156, 114, 0.808);
+    
+}
+.box:hover span{
+    background: rgba(25, 188, 139, 0.767);
+}
